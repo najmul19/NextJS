@@ -144,14 +144,17 @@ const ServicesPage = () => {
   return (
     <div>
       <p className="font-bold text-3xl">ServicesPage</p>
-      {data.map((d) => {
-        return <div className="space-y-4">
-            <Link href={`/services/${d._id}`}>
-            
-            <img src={d.serviceImage}></img>
-            </Link>
-        </div>;
-      })}
+      <div className="max-w-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto">
+        {data.map((d, indx) => {
+          return (
+            <div key={d._id} className="space-y-4 ">
+              <Link href={`/services/${d._id}`}>
+                <img src={d.serviceImage}></img>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

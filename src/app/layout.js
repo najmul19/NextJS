@@ -18,13 +18,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
        <NavBar></NavBar>
-        <main className="h-screen h-max-[600px] place-items-center place-content-center">
+        <main className=" ">
           {children}
         </main>
 

@@ -140,10 +140,10 @@ const ServiceDetailPage = ({params}) => {
         "Get technical help and system maintenance for your business.",
     },
   ];
-    const id = params.id;
+    const id = params?.id;
     const singleDatat = data.find(d=> d._id == id)
     return (
-        <div>
+        <div className=''>
             <h1>ServiceDetailPage</h1>
             <p>Id: {id}</p>
             <p>{singleDatat.serviceName}</p>
