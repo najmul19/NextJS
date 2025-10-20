@@ -1,8 +1,7 @@
-import Link from "next/link";
-import React from "react";
+import React from 'react';
 
-const ServicesPage = () => {
-  const data = [
+const ServiceDetailPage = ({params}) => {
+     const data = [
     {
       _id: "1",
       serviceName: "Web Development",
@@ -141,19 +140,16 @@ const ServicesPage = () => {
         "Get technical help and system maintenance for your business.",
     },
   ];
-  return (
-    <div>
-      <p className="font-bold text-3xl">ServicesPage</p>
-      {data.map((d) => {
-        return <div className="space-y-4">
-            <Link href={`/services/${d._id}`}>
-            
-            <img src={d.serviceImage}></img>
-            </Link>
-        </div>;
-      })}
-    </div>
-  );
+    const id = params.id;
+    const singleDatat = data.find(d=> d._id == id)
+    return (
+        <div>
+            <h1>ServiceDetailPage</h1>
+            <p>Id: {id}</p>
+            <p>{singleDatat.serviceName}</p>
+            <img src={singleDatat.serviceImage}></img>
+        </div>
+    );
 };
 
-export default ServicesPage;
+export default ServiceDetailPage;
