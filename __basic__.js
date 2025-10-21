@@ -64,3 +64,11 @@
 /**
  * 6. in next js we can found path name from usePathname() and top of the page should write "use client"
  */
+
+/**
+ * 7. for use dynamic must to write folder with this []
+ * ---- if we need apply for all pages then we need to write spread operation "..."
+ * example: [...slugs]
+ * slugs is nothing but its a name of the folder which is recomended
+ */
+
