@@ -72,3 +72,11 @@
  * slugs is nothing but its a name of the folder which is recomended
  */
 
+/**
+ * 8. for not-found and loading page
+    * next js provide it autometically when imidiate inside the app if we write file name not-found.jsx its work for not found page automatically
+    * but for dynamic route like details items its need a dynamic id and if its provide user false id then its not work as a not found page its should be handled manually in the details page using condition
+    * example -> see->> service->[id]-page.jsx
+    * 
+  * and also if file name is loading then its worked as a loading data times before fethcing the content
+ */

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const ServiceDetailPage = ({params}) => {
-     const data = [
+const ServiceDetailPage = ({ params }) => {
+  const data = [
     {
       _id: "1",
       serviceName: "Web Development",
@@ -140,16 +140,20 @@ const ServiceDetailPage = ({params}) => {
         "Get technical help and system maintenance for your business.",
     },
   ];
-    const id = params?.id;
-    const singleDatat = data.find(d=> d._id == id)
+  const id = params?.id;
+  const singleDatat = data.find((d) => d._id == id);
+  if (singleDatat) {
     return (
-        <div className=''>
-            <h1>ServiceDetailPage</h1>
-            <p>Id: {id}</p>
-            <p>{singleDatat.serviceName}</p>
-            <img src={singleDatat.serviceImage}></img>
-        </div>
+      <div className="">
+        <h1>ServiceDetailPage</h1>
+        <p>Id: {id}</p>
+        <p>{singleDatat.serviceName}</p>
+        <img src={singleDatat.serviceImage}></img>
+      </div>
     );
+  } else {
+    return <p>Not Found Service</p>
+  }
 };
 
 export default ServiceDetailPage;
