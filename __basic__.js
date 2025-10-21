@@ -80,3 +80,24 @@
     * 
   * and also if file name is loading then its worked as a loading data times before fethcing the content
  */
+
+/**
+ * 9. in react js midleware means->
+ * for the react js application request from clinet side midleware works to validate these request (like token or something) and if its true/valid then express js handle further process , that means its work request response cycle function is midlware
+ * 
+ * -> In next JS midlware means->
+ * for next js application request from next js client side midlware works to validate and if its valid then go through next Js Server
+ * note: next midleware workes for nextJS client and nextJs server layer , so nextjs midleware not works for nexts client and express js midleware
+ * in this case if next js client server give any request for expresJs Server then the midleware works the expressJS one not next JS midlware 
+ */
+
+/**
+ * 10. Next js MiddleWare creation
+ * for creating nextJs middleware wee need to make a file isnide the src folder (must) the name must be middleware.js or ts 
+ */
+
+/**
+ * 11. redirect vs rewrite
+ * redrect will change the uri/url/pathname like if user try to access admin route then mddleware redirect it into login page and pathname also change to /login, on the other hand
+ * rewrite will not change the path name if user try to something access admin authorization then redirect to login page and  path name will not change it will stay as user which path actually tries to access and its help to user if he login as admin redirect the actual path where he/ shee wants to go/access
+ */
