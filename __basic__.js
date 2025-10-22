@@ -134,5 +134,7 @@
  */
 
 /**
- * 
+ * 13.
+ * In nextJs all of the hooks should be in client side and user interect should be in client side
+ * and data fetching should be in server side
  */
