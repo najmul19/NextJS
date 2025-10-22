@@ -100,4 +100,39 @@
  * 11. redirect vs rewrite
  * redrect will change the uri/url/pathname like if user try to access admin route then mddleware redirect it into login page and pathname also change to /login, on the other hand
  * rewrite will not change the path name if user try to something access admin authorization then redirect to login page and  path name will not change it will stay as user which path actually tries to access and its help to user if he login as admin redirect the actual path where he/ shee wants to go/access
+ * 
+ */
+
+/**
+ * 12. Rendaring
+ * process of transforming code into the visual and interactive web pages that users see and interact with on their browser
+ * 
+ * --? react js works only client side rendering
+ * --> NExtJs works client side and pre_rendering
+ * 
+ * -->CLient side rendering:
+ *  web page is rendered by the users browser instead of the server
+ * --> Pre-Rendering
+ *  Process of generating a websites content or parts of it before a user requests them
+ * 
+ * ---> Pree-Rendering 2 types(SEO friendly)
+ * 1. Server side Rendering(SSR)
+ *    web server generates the complete HTML for a page each time a user request it
+ * 2. Static Site Generation(SSG)
+ *    Websites HTML pages are pre-buildat build time, before being deploted to a server
+ * 
+ * 
+ * 
+ * ****Client Side Rendering:****
+ * When we run npm run build before deploy, its creat dist file where available a html file and reactJs code will convert JvaScript code and also available img,jason file
+ * when user/browser request to web Server(ntify,vercel, etc.) then these code will come into clinet/browser and in browser execute first the Javascript code and works to fetching process from bacnkend/DB 
+ * and after all process its convert as html and css file
+ * that means javascript executing process is done by client/browser so its need help of the browser V8 engine
+ * Note: the search engine is not waiting for executig the javaScript code they axpect that html, css file so its not SEO freandly
+ * 
+ * 
+ */
+
+/**
+ * 
  */
