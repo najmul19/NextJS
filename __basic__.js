@@ -152,3 +152,21 @@
  * ii. NextJs Image tag also optimize / reduce size of the image
  * iii. NextJs Image tag also make the type of the image is 'webp'
  */
+/**
+ * 16. Create API - Route Handlers
+ * for create route inside
+ * app
+ *  api
+ *    items
+ *      [id] // dynamic
+ *        route.jsx
+ *      route.jsx
+ * 
+ * monogDB--> package level create a folder name
+ * lib
+ *    dbConnect.js
+ * 
+ * DBNAME and DBURL should be inside the .env.local file
+ * 
+ * 
+ */
