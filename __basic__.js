@@ -143,3 +143,12 @@
  * 14. MetaData
  * any search engine read the meta data for knowing the purpose of the website
  */
+
+/**
+ * 15. NextJs Image tag
+ * normal image tag load all once at a time and its not reduce the size of the image
+ * *******NextJs Image*********
+ * i. NextJs Image tag load only the neccesery image and imideate image which maybe show after little bit time which makes ui fast
+ * ii. NextJs Image tag also optimize / reduce size of the image
+ * iii. NextJs Image tag also make the type of the image is 'webp'
+ */

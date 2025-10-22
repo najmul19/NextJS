@@ -1,11 +1,17 @@
+import { Roboto , Besley } from "next/font/google";
 import Link from "next/link";
 import MealSearchInput from "./components/MealSearchInput";
+import Image from "next/image";
 
 export const metadata = {
   title: "All Meals",
   
   description: "All Meals from meal db API",
 };
+const roboto = Besley({
+  weight: ["400", "700"],
+  subsets: ["latin"]
+})
 
 const MealsPage = async ({ searchParams }) => {
   const query = await searchParams;
@@ -35,8 +41,9 @@ const MealsPage = async ({ searchParams }) => {
         {/* <p>{JSON.stringify(meals)}</p> */}
         {meals?.map((singleMeals) => {
           return (
-            <div key={singleMeals.idMeal} className="bg-teal-100 p-5 text-black rounded-2xl">
-              <p className="text-2xl font-bold">{singleMeals?.strMeal}</p>
+            <div key={singleMeals?.idMeal} className="bg-teal-100 p-5 text-black rounded-2xl">
+              <Image width={641} height={641} src={singleMeals?.strMealThumb} alt={singleMeals?.strMeal} />
+              <p className={`${roboto.className} text-2xl font-bold`}>{singleMeals?.strMeal}</p>
               <p>{singleMeals?.strInstructions}</p>
               <Link href={`/meals/${singleMeals.idMeal}`}>
               <button className="bg-amber-200 rounded-2xl px-5">Details</button>
