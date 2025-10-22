@@ -138,3 +138,8 @@
  * In nextJs all of the hooks should be in client side and user interect should be in client side
  * and data fetching should be in server side
  */
+
+/**
+ * 14. MetaData
+ * any search engine read the meta data for knowing the purpose of the website
+ */

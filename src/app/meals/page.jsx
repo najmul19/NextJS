@@ -1,4 +1,11 @@
+import Link from "next/link";
 import MealSearchInput from "./components/MealSearchInput";
+
+export const metadata = {
+  title: "All Meals",
+  
+  description: "All Meals from meal db API",
+};
 
 const MealsPage = async ({ searchParams }) => {
   const query = await searchParams;
@@ -31,9 +38,13 @@ const MealsPage = async ({ searchParams }) => {
             <div key={singleMeals.idMeal} className="bg-teal-100 p-5 text-black rounded-2xl">
               <p className="text-2xl font-bold">{singleMeals?.strMeal}</p>
               <p>{singleMeals?.strInstructions}</p>
+              <Link href={`/meals/${singleMeals.idMeal}`}>
+              <button className="bg-amber-200 rounded-2xl px-5">Details</button>
+              </Link>
             </div>
           );
         })}
+
       </div>
     </div>
   );
