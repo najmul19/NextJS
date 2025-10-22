@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.testing-purpose-css-class {
+  color: #441b1bd2;
+  background-color: rgba(255, 208, 0, 0.595);
+  
+}
