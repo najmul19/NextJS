@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import React from "react";
 
 const ProductPage = async () => {
@@ -5,6 +6,9 @@ const ProductPage = async () => {
     cache: "force-cache",
   });
   const data = await res.json();
+//   if(data.length>3){
+//     redirect("/")
+//   }
   return (
     <div>
       {/* <p>{JSON.stringify(data)}</p> */}

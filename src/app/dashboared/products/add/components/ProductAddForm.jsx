@@ -1,7 +1,10 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const ProductAddForm = () => {
+  const router = useRouter();
+
   //   const [productName, setProductName] = useState("");
 
   const handleSubmit = async (e) => {
@@ -21,8 +24,10 @@ const ProductAddForm = () => {
     const result = await res.json();
     console.log(result);
     form.reset();
-    alert("Prudct Added");
+    // alert("Prudct Added");
     // setProductName("");
+    router.push("/products");
+    // router.refresh();
   };
 
   return (
@@ -32,7 +37,7 @@ const ProductAddForm = () => {
           className="bg-teal-50 text-black p-2 mb-5 rounded-2xl"
           type="text"
           name="productName"
-        //   value={productName}
+          //   value={productName}
           //   onChange={(e) => setProductName(e.target.value)}
           placeholder="Enter product name"
         />

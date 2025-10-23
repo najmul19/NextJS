@@ -10,7 +10,7 @@ const roboto = Cabin_Condensed({
 const NavBar = () => {
   const pathName = usePathname();
   console.log(pathName, pathName.includes("dashboard"));
-  if (!pathName.includes("dashboard")) {
+  if (!pathName.includes("dashboared")) {
     return (
       <div>
         <nav className="flex justify-center">

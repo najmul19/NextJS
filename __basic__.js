@@ -189,3 +189,22 @@
     }
     
  */
+
+/**
+ * Loading Spinner and Redirect
+ * --> for loading specific route we should need a name loading inside this folder then it will work as laoding before fething data
+ * --> Redirect works for server side and router push for client side for redirecting
+ * and if we need to redirect to dashboared like nasted route from simple route then wee need to work on next.config.mjs file
+ *  example:
+ *  async redirects() {
+    return [
+      // Basic redirect
+      {
+        source: '/products/add',
+        destination: '/dashboared/products/add',
+        permanent: true,
+      },
+      
+    ]
+  },
+ */
