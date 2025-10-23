@@ -162,7 +162,7 @@
  *        route.jsx
  *      route.jsx
  * 
- * monogDB--> package level create a folder name
+ * monogDB--> iside src create a folder name
  * lib
  *    dbConnect.js
  * 
