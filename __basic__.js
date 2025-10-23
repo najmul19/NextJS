@@ -166,7 +166,26 @@
  * lib
  *    dbConnect.js
  * 
- * DBNAME and DBURL should be inside the .env.local file
- * 
- * 
+ * DBNAME and DBURL should be inside the .env.local file and in next js backtick not allowd so just replace dbname and pass and also avoid qoute
+ */
+
+
+
+/**
+ * Caching and Revalidating
+ * -->in NextJS 15+ data not automatically cached , so we need forcefully cached
+ *     example:
+         const res = await fetch("http://localhost:3000/api/items", {
+            cache: "force-cache",
+  });
+
+   -->and if force-cache is apply then must need Revalidating in server side api otherwise new add one will not show in the ui
+    example:
+    export async function POST(req) {
+      const postedData = await req.json();
+      const result = await dbConnect("products").insertOne(postedData);
+      revalidatePath("/products")
+      return Response.json(result );
+    }
+    
  */
