@@ -46,7 +46,7 @@ const MealsPage = async ({ searchParams }) => {
               <p className={`${roboto.className} text-2xl font-bold`}>{singleMeals?.strMeal}</p>
               <p>{singleMeals?.strInstructions}</p>
               <Link href={`/meals/${singleMeals.idMeal}`}>
-              <button className="bg-amber-200 rounded-2xl px-5">Details</button>
+              <button className="bg-amber-200 rounded-2xl px-5 cursor-pointer">Details</button>
               </Link>
             </div>
           );
