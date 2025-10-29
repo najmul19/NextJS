@@ -1,5 +1,10 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
+export const collectionNames = {
+  TEEST_USER: "test-user",
+  PRODUCTS: "products",
+};
+
 export function dbConnect(collectionName) {
   // const uri = "mongodb+srv://<db_username>:<db_password>@cluster0.zof5niq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
   const uri = process.env.MONGO_URI;
@@ -11,5 +16,5 @@ export function dbConnect(collectionName) {
       deprecationErrors: true,
     },
   });
-  return client.db(process.env.DB_NAME).collection(collectionName)
+  return client.db(process.env.DB_NAME).collection(collectionName);
 }
