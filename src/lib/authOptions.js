@@ -49,11 +49,47 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
     GitHubProvider({
-    clientId: process.env.GITHUB_ID,
-    clientSecret: process.env.GITHUB_SECRET
-  })
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),
   ],
   callbacks: {
+    async signIn({ user, account, profile, email, credentials }) {
+      if (account) {
+        try {
+          // console.log("from signin callback: ", {
+          //   user,
+          //   account,
+          //   profile,
+          //   email,
+          //   credentials,
+          // });
+
+          const { providerAccountId, provider } = account;
+          const { email: user_email, image, name } = user;
+          const payload = {
+            role: "user",
+            providerAccountId,
+            provider,
+            user_email,
+            image,
+            name,
+          };
+          // console.log(payload);
+          const userCollection = dbConnect(collectionNames.TEEST_USER);
+          const isUserExist = await userCollection.findOne({
+            providerAccountId,
+          });
+          if (!isUserExist) {
+            await userCollection.insertOne(payload);
+          }
+        } catch (error) {
+          return false;
+        }
+      }
+
+      return true;
+    },
     async session({ session, token, user }) {
       if (token) {
         session.user.username = token.username;

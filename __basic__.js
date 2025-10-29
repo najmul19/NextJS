@@ -276,6 +276,6 @@
 /**
  * 24. github login
  * go to next auth find providers and github go to configuration
- * create new github app, provide name, localgost url, callbacck same localhost url, webhok deslect/not remove slection generate secret copy id and ssecret
+ * create new github app, provide name, localgost url, callbacck same localhost url, webhok deslect/not remove slection generate secret copy id and secret save change
  * follow doc by scroll, make variable into .env.local and done
  */

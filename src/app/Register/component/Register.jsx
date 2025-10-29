@@ -8,7 +8,7 @@ const RegisterForm = () => {
     const form = e.target;
     const username = form.username.value;
     const password = form.password.value;
-    const payload = { username, password };
+    const payload = {role: "user", username, password };
     // console.log(payload)
     const result = await registerUser(payload);
     console.log(result);
