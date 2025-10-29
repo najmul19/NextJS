@@ -241,3 +241,22 @@
  * in server side it can get from home(page) as ut is server side and use getServerSession 
  * note: for server side getting user must be need .env.local file a variable name NEXTAUTH_SECRET with jekono kichu in dev mode otherwise it will not worked and getting error
  */
+
+/**
+ * 22. integrate database with next auth
+ * for registration we need to create a folder for registration both client and server
+ * then need to create a folder name auth which is inside action and inside auth create a file registerUser 
+ * where get the payload from client and using dbConnect provide a collection name and inserone thats it 
+ * from client side call registerUser and provide payload then it will inserted the info into database
+ * 
+ * for login----> in auth route page(server)
+ * first destruct username and password
+ * find user using usernam form db
+ * check password of db and the the filed password is same or not , check condition and return
+ * 
+ * now for see the actual user info using get and useSession we need to some extra work in auth route page(server)->
+ * go to nextauth doc and find configuration and options find right side callback
+ * copy the session and jwt method and go in auth route page(server)
+ * after providers make callback : [paste here and modified code]
+ * now it will work perfectly to get the user info
+ */

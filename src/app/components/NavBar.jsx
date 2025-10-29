@@ -36,6 +36,9 @@ const NavBar = () => {
             <Link href="/about">
               <li>About</li>
             </Link>
+            <Link href="/Register">
+              <li>Register</li>
+            </Link>
           </ul>
         </nav>
       </div>
