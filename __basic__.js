@@ -228,3 +228,16 @@
  * click get started and copy the import of signIn 
  * and in button onLCink call this fucntion it will go thorwgh by default in route.js for login
  */
+
+/**
+ * 21. get current user
+ * first go to next auth doc and get started and find: Configure Shared session state copy this code 
+ * create a folder inside src name Providers and inside this create a file NextAuthSessionprovider
+ * and paste the code here, make sure write use client as it is cleint side
+ * 
+ * Note: for client side get the user using useSession and for server sider it will work with getServerSession(here a parameter ex:providers one)
+ * layout should be wraped using NextAuthSessionProvider
+ * for user info create a component name userInfo.jsx and fetch is as useSession calling as for client side
+ * in server side it can get from home(page) as ut is server side and use getServerSession 
+ * note: for server side getting user must be need .env.local file a variable name NEXTAUTH_SECRET with jekono kichu in dev mode otherwise it will not worked and getting error
+ */
