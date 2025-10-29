@@ -190,6 +190,8 @@
     
  */
 
+
+
 /**
  * 18. Loading Spinner and Redirect
  * --> for loading specific route we should need a name loading inside this folder then it will work as laoding before fething data
@@ -259,4 +261,14 @@
  * copy the session and jwt method and go in auth route page(server)
  * after providers make callback : [paste here and modified code]
  * now it will work perfectly to get the user info
+ */
+
+/**
+ * 23. google login
+ * go to nextauth doc open provideres click google
+ * go to configuration
+ * if not previous project, create one, provide name email, selct external and create
+ * provide, aplication type authorization  scroll down doc and found it as link
+ * copy id and secret, paste it in .env.local file
+ * scrool doc and find example, paste it bellow the provider im mext auth file or authOptions file
  */

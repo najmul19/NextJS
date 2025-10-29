@@ -1,5 +1,6 @@
 import { collectionNames, dbConnect } from "@/lib/dbConnect";
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions = {
   providers: [
@@ -27,7 +28,9 @@ export const authOptions = {
         // Add logic here to look up the user from the credentials supplied
         //   const user = { id: "1", name: "J Smith", email: "jsmith@example.com" }
         const { username, password } = credentials;
-        const user = await dbConnect(collectionNames.TEEST_USER).findOne({ username });
+        const user = await dbConnect(collectionNames.TEEST_USER).findOne({
+          username,
+        });
         const isPasswordOk = password == user.password;
         if (isPasswordOk) {
           // Any object returned will be saved in `user` property of the JWT
@@ -39,6 +42,10 @@ export const authOptions = {
           // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
         }
       },
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
   callbacks: {
