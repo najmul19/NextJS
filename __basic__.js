@@ -218,4 +218,13 @@
  *        route.js
  *          here inside the route.js copy the code from nextauth docs inside provider folder copy route handler code
  *          then find name credential and full providers code
+ * 
+ * advantage: in next js they provide default token 
+ */
+
+/**
+ * 20. check login status
+ * make a client page for login button go to nextauth doc 
+ * click get started and copy the import of signIn 
+ * and in button onLCink call this fucntion it will go thorwgh by default in route.js for login
  */
