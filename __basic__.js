@@ -172,7 +172,7 @@
 
 
 /**
- * Caching and Revalidating
+ * 17. Caching and Revalidating
  * -->in NextJS 15+ data not automatically cached , so we need forcefully cached
  *     example:
          const res = await fetch("http://localhost:3000/api/items", {
@@ -191,7 +191,7 @@
  */
 
 /**
- * Loading Spinner and Redirect
+ * 18. Loading Spinner and Redirect
  * --> for loading specific route we should need a name loading inside this folder then it will work as laoding before fething data
  * --> Redirect works for server side and router push for client side for redirecting
  * and if we need to redirect to dashboared like nasted route from simple route then wee need to work on next.config.mjs file
@@ -207,4 +207,15 @@
       
     ]
   },
+ */
+
+/**
+ * 19. NextAuth initial setup
+ * install next-auth (follow nextauth doc)
+ * inside the api folder
+ *    auth
+ *      [...nextauth]
+ *        route.js
+ *          here inside the route.js copy the code from nextauth docs inside provider folder copy route handler code
+ *          then find name credential and full providers code
  */
