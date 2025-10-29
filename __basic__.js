@@ -272,3 +272,10 @@
  * copy id and secret, paste it in .env.local file
  * scrool doc and find example, paste it bellow the provider im mext auth file or authOptions file
  */
+
+/**
+ * 24. github login
+ * go to next auth find providers and github go to configuration
+ * create new github app, provide name, localgost url, callbacck same localhost url, webhok deslect/not remove slection generate secret copy id and ssecret
+ * follow doc by scroll, make variable into .env.local and done
+ */
